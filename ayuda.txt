@@ -93,3 +93,12 @@ btn.addEventListener("click", ()=> {
         salida.textContent = message
     }
 })
+
+ver repos existentes:
+git branch 
+
+crear repos:
+git branch "nombre"
+
+ir a repo:
+git checkout "nombre"
