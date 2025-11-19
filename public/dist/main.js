@@ -15,7 +15,7 @@ function getIdFromButton() {
 }
 function findProduct(id) {
     console.log('--------------------------------------');
-    console.log('Llama a la function FIND EMPLEADO');
+    console.log('Llama a la function FIND PRODUCT');
     console.log('--------------------------------------');
     getProductoPorId(id)
         .then((producto) => {

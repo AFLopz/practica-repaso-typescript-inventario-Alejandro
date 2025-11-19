@@ -1,3 +1,49 @@
+npm init -y
+npm install typescript --save-dev
+npx tsc --init
+
+
+configuracion de tsconfig:
+{
+  "compilerOptions":{
+      "target": "ES2020",
+      "module": "ES2020",
+      "strict": true,
+      "outDir": "public/dist",
+      "rootDir": "src"
+  }
+}
+
+compilar:
+npx tsc
+
+
+
+
+import { productos } from "../data/info.js";
+
+
+export async function getProductoPorId(id: number): Promise<string>{
+    console.log("----------------------------------");
+    console.log("Llamada a la función GET PRODUCTO POR ID")
+    console.log("----------------------------------");
+
+    const promesa: Promise<string> = new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            const producto = productos.find( e => e.id === id)?.nombre
+            if(producto) {
+                resolve(producto);
+            } else {
+                reject(`Producto con id ${id} no existe`)
+            }
+        }, 800);
+    });
+    return promesa;
+}
+
+
+
+
 import { getProductoPorId } from "./service/getProductoService.js";
 
 const btn = document.getElementById("ProductNumber") as HTMLButtonElement;
