@@ -1,9 +1,9 @@
 import { productos } from "../data/info.js";
 
 
-export async function getProducto(id: number): Promise<string>{
+export async function getProductoPorId(id: number): Promise<string>{
     console.log("----------------------------------");
-    console.log("Llamada a la función GET EMPLEADO")
+    console.log("Llamada a la función GET PRODUCTO POR ID")
     console.log("----------------------------------");
 
     const promesa: Promise<string> = new Promise((resolve, reject) => {
