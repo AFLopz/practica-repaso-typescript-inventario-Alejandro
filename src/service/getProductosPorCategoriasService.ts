@@ -12,7 +12,7 @@ export async function getProductoPorCategoria(categoria: string): Promise<Produc
             if(producto.length > 0) {
                 resolve(producto);
             } else {
-                reject(`Productos con categorias ${categoria} no existe`)
+                reject(`Producto con categorias ${categoria} no existe`)
             }
         }, 1000);
     });

@@ -21,7 +21,7 @@ function findProductos(categoria : string): void{
         .then((producto) =>{
             console.log("PROMISE RESOLVE, PASO PRO EL THEN")
             console.log(producto, 'producto')
-            salida.textContent = `Los productos buscado son ${producto}`
+            salida.textContent = `Los productos buscado son ${producto.map(p => p.nombre).join(', ')}`
         })
         .catch((error)=>{
             console.log("PROMISE RESOLVE, PASO POR EL CATCH")
